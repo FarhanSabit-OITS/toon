@@ -14,7 +14,8 @@ export function escapeString(value: string): string {
     .replace(/\n/g, `${BACKSLASH}n`)
     .replace(/\r/g, `${BACKSLASH}r`)
     .replace(/\t/g, `${BACKSLASH}t`)
-    .replace(/[\u0000-\u001f]/g, c => `${BACKSLASH}u${c.charCodeAt(0).toString(16).padStart(4, '0')}`)
+    // eslint-disable-next-line no-control-regex
+    .replace(/[\u0000-\u001F]/g, c => `${BACKSLASH}u${c.charCodeAt(0).toString(16).padStart(4, '0')}`)
 }
 
 /**

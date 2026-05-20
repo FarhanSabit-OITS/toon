@@ -16,6 +16,7 @@ const config: FlatConfigComposer<TypedFlatConfigItem, ConfigNames> = antfu({
     'import/no-duplicates': 'off',
     'style/no-tabs': 'off',
     'yaml/quotes': 'off',
+    'yaml/indent': 'off',
   },
 })
 

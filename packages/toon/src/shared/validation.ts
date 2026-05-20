@@ -72,7 +72,8 @@ export function isSafeUnquoted(value: string, delimiter: string = DEFAULT_DELIMI
   }
 
   // Check for control characters (any U+0000–U+001F always need quoting/escaping)
-  if (/[\u0000-\u001f]/.test(value)) {
+  // eslint-disable-next-line no-control-regex
+  if (/[\u0000-\u001F]/.test(value)) {
     return false
   }
 
